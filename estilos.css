@@ -118,17 +118,146 @@ body {
     gap: 0.8rem;
 }
 
-.logo-cuadros {
-    display: grid;
-    grid-template-columns: repeat(2, 18px);
-    grid-template-rows: repeat(2, 18px);
-    gap: 2px;
+/* ===== LOGO REAL ALBOMUN ===== */
+
+/* Estilos base para el logo en todas partes */
+.logo-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
 }
 
-.logo-cuadros .cuadro {
-    width: 18px;
-    height: 18px;
-    border-radius: 3px;
+.logo-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Logo en el navbar */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.nav-logo .logo-principal {
+    width: 45px;
+    height: 45px;
+}
+
+.nav-logo .logo-texto {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--azul);
+    letter-spacing: -0.02em;
+}
+
+/* Logo en el footer */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo .logo-principal {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-logo .logo-texto {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* Logo en la sección de inscripción (decoración) */
+.inscripcion-decoracion {
+    background: linear-gradient(135deg, var(--azul), var(--verde));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.inscripcion-decoracion .logo-principal {
+    width: 150px;
+    height: 150px;
+    /* Esto hace el logo blanco si es necesario */
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+}
+
+.inscripcion-decoracion .logo-principal:hover {
+    transform: scale(1.05);
+}
+
+/* Versión para cuando el logo es oscuro y necesita fondo claro */
+.inscripcion-decoracion .logo-principal.logo-oscuro {
+    filter: none;
+    /* Quita el filtro si el logo ya es visible */
+}
+
+/* Versión para móvil */
+@media (max-width: 768px) {
+    .inscripcion-decoracion .logo-principal {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* ===== LOGO EN INSCRIPCIÓN - TAMAÑO GRANDE ===== */
+.inscripcion-decoracion {
+    background: linear-gradient(135deg, var(--azul), var(--verde));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    min-height: 400px;
+}
+
+.logo-principal.logo-inscripcion {
+    width: 250px;
+    height: 250px;
+    opacity: 0.95;
+    transition: transform 0.3s ease;
+}
+
+.logo-principal.logo-inscripcion:hover {
+    transform: scale(1.05);
+}
+
+.logo-principal.logo-inscripcion img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Responsive para el logo de inscripción */
+@media (max-width: 768px) {
+    .logo-principal.logo-inscripcion {
+        width: 180px;
+        height: 180px;
+    }
+
+    .inscripcion-decoracion {
+        min-height: 250px;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-principal.logo-inscripcion {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 .logo-texto {

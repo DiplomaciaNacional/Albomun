@@ -21,11 +21,8 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <div class="logo-cuadros">
-                    <span class="cuadro" style="background: var(--verde);"></span>
-                    <span class="cuadro" style="background: var(--azul);"></span>
-                    <span class="cuadro" style="background: var(--amarillo-oscuro);"></span>
-                    <span class="cuadro" style="background: var(--amarillo-claro);"></span>
+                <div class="logo-principal">
+                    <img src="img/logo.jpg" alt="ALBOMUN Logo">
                 </div>
                 <span class="logo-texto">ALBOMUN</span>
             </div>
@@ -154,7 +151,7 @@
                     </div>
                     <h3>Costo de participación</h3>
                     <ul class="info-lista">
-                        <li><strong>240 Bs</strong> - Delegados</li>
+                        <li><strong>220 Bs</strong> - Delegados</li>
                         <li class="incluye">Incluye: kit del delegado, coffee breaks, certificado</li>
                     </ul>
                 </div>
@@ -609,6 +606,7 @@
     </section>
 
     <!-- SECCIÓN INSCRIPCIÓN -->
+    <!-- SECCIÓN INSCRIPCIÓN -->
     <section id="inscripcion" class="seccion fondo-claro">
         <div class="container">
             <div class="inscripcion-container">
@@ -643,11 +641,8 @@
                 </div>
 
                 <div class="inscripcion-decoracion">
-                    <div class="decoracion-cuadros">
-                        <div class="decoracion-cuadro" style="background: var(--verde);"></div>
-                        <div class="decoracion-cuadro" style="background: var(--azul);"></div>
-                        <div class="decoracion-cuadro" style="background: var(--amarillo-oscuro);"></div>
-                        <div class="decoracion-cuadro" style="background: var(--amarillo-claro);"></div>
+                    <div class="logo-principal logo-inscripcion">
+                        <img src="img/logo.jpg" alt="ALBOMUN Logo">
                     </div>
                 </div>
             </div>
@@ -660,11 +655,8 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <div class="logo-cuadros">
-                            <span class="cuadro" style="background: var(--verde);"></span>
-                            <span class="cuadro" style="background: var(--azul);"></span>
-                            <span class="cuadro" style="background: var(--amarillo-oscuro);"></span>
-                            <span class="cuadro" style="background: var(--amarillo-claro);"></span>
+                        <div class="logo-principal logo-oscuro">
+                            <img src="img/logo.jpg" alt="ALBOMUN Logo">
                         </div>
                         <span class="logo-texto">ALBOMUN</span>
                     </div>
@@ -732,23 +724,6 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
-        });
-
-        // Tabs del cronograma
-        const diaBtns = document.querySelectorAll('.dia-btn');
-        const cronogramas = document.querySelectorAll('.cronograma-contenido');
-
-        diaBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remover active de todos
-                diaBtns.forEach(b => b.classList.remove('active'));
-                cronogramas.forEach(c => c.classList.remove('active'));
-
-                // Activar el seleccionado
-                btn.classList.add('active');
-                const diaId = `dia${btn.dataset.dia}`;
-                document.getElementById(diaId).classList.add('active');
-            });
         });
     </script>
 </body>
